@@ -48,7 +48,7 @@ out = test.change.point.copula.BKRS(x)
 
 }
 \references{
-Nasri, B. R. Remillard, B., & Bahraoui, T. (2021). Change-point problems for multivariate time series using pseudo-observations
+Nasri, B. R. Remillard, B., & Bahraoui, T. (2022). Change-point problems for multivariate time series using pseudo-observations, J. Multivariate Anal., 187, 104857.
 
 Bucher, A., Kojadinovic, I., Rohmer, T., & Segers, J. (2014). Detecting changes in cross-sectional dependence in multivariate time series, J. Multiv. Anal., 132, 111--128.
 }

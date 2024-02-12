@@ -7,9 +7,13 @@
 multiplierDSeqfun(U, grad, n, d)
 }
 \arguments{
-\item{n}{length of the series.}
+\item{U}{matrix needed for multipliers}
 
-\item{MC}{n x n matrix = MM  - C, with MM[i,j] = 1(Xi <= Xj) and C=mean(M[,j]);}
+\item{grad}{gradient of the copula}
+
+\item{n}{length of the series}
+
+\item{d}{number of variables.}
 }
 \value{
 \item{cvm}{simulated value of the Cramer-von Mises statistic}
@@ -21,7 +25,7 @@ This function simulates a random sample of Gaussian multipliers  null hypothesis
 and compute the Cramer-von Mises and Kolmogorov-Smirnov test statistics.
 }
 \references{
-Nasri, B. R. Remillard, B., & Bahraoui, T. (2021).
+Nasri, B. R. Remillard, B., & Bahraoui, T. (2022).
 }
 \author{
 Bouchra R Nasri  and Bruno N Remillard, August 6, 2020

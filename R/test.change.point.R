@@ -18,7 +18,7 @@
 #'@return \item{tauCVM}{Estimated changepoint using the Cramer-von Mises statistic}
 #'@return \item{tauKS}{Estimated changepoint using the Kolmogorov-Smirnov statistic}
 #'
-#'@references Nasri, B. R. Remillard, B., & Bahraoui, T. (2021). Change-point problems for multivariate time series using pseudo-observations
+#'@references Nasri, B. R. Remillard, B., & Bahraoui, T. (2022). Change-point problems for multivariate time series using pseudo-observations, J. Multivariate Anal., 187, 104857.
 #'
 #'@examples
 #'x=matrix(rnorm(600),ncol=3)

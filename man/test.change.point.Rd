@@ -46,7 +46,7 @@ out = test.change.point(x)
 
 }
 \references{
-Nasri, B. R. Remillard, B., & Bahraoui, T. (2021). Change-point problems for multivariate time series using pseudo-observations
+Nasri, B. R. Remillard, B., & Bahraoui, T. (2022). Change-point problems for multivariate time series using pseudo-observations, J. Multivariate Anal., 187, 104857.
 }
 \author{
 Bouchra R Nasri  and Bruno N Remillard, August 6, 2020
