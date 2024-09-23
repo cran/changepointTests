@@ -1,13 +1,13 @@
-d09daf35ad43527c5c9de9440f608e62 *DESCRIPTION
+ae588f4b34e81d3ab21090bcbeb60329 *DESCRIPTION
 c2edeb7b022e1d3b84e9f361d9df828c *NAMESPACE
 c15a4948188dced3f8746a1d8202032c *R/bootstrapfun.R
 5ab4c6e9bd48e692b5cd830e9dbcef4b *R/cpCopDStats.R
 933283c51d90e5c106fb2b3923bae81e *R/cpCopMultStats.R
-fc2bc771c94a5e6b9b73a8a2509e12e7 *R/cpCopMultStatsBKRSNonSeq.R
-e4322e3be1dfedf62ebabf0485c8360a *R/cpCopMultStatsBKRSSeq.R
-34ba87d68eb212aecf836e6b84a8c356 *R/cpCopStats.R
-112e534aea2f4a38b1151d5d989dfff5 *R/cpCopStatsBKRS.R
-d6ceed749b9bbbf449c72c8e93fd3e0d *R/emp.cdf.R
+5d2c9b8692159b9f702ca82712ee0a77 *R/cpCopMultStatsBKRSNonSeq.R
+a39da20735a8673fc577a676813f711d *R/cpCopMultStatsBKRSSeq.R
+51b95169b1c6187639dda3805c8ee9ee *R/cpCopStats.R
+2f7654a13875f2c672b575b04565881d *R/cpCopStatsBKRS.R
+afdaf21470fc013b6e904f217e291b38 *R/emp.cdf.R
 c03bc87c2522dd879cec9f1d3fdf2350 *R/multiplierDNonSeqfun.R
 b806a4aa749606ac0b89791bc7a7a1bf *R/multiplierDSeqfun.R
 803a5d287286f5923c0609d88680d0e7 *R/multiplierfun.R
@@ -28,5 +28,5 @@ ed7ffa49d9b9f73271a06d0e27b9917c *man/multiplierfun.Rd
 e5c5a62ff051d44450b8c601723f4de2 *man/pseudos.Rd
 ad18f3803a1fc25b2ee8fad8114e99f6 *man/test.change.point.Rd
 3f3c697ce6a6242ac2ca7ba8c43097a7 *man/test.change.point.copula.BKRS.Rd
-1a9bb8fd2bdc37af6db10e00723c7118 *src/changepointCopR.c
+f86b83a2a864ffc7bef45b944b5832b5 *src/changepointCopR.c
 409a3ab7f8a001856071cc8ba4dfc640 *src/registerDynamicSymbol.c

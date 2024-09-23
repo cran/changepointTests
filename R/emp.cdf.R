@@ -1,6 +1,5 @@
 #'@title Function to compute the empirical cdf at given points
 #'
-#'
 #'@description This function is used to compute the empirical process used in the changepoint tests
 #'@param x        n x d matrix of pseudo-observations
 #'@param u        evaluation points of the cdf

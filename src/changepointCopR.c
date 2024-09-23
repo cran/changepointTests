@@ -189,10 +189,10 @@
        int i,j,k;
 
 
-       double *cum0 = Calloc( n[0], double);
-       double *M0  = Calloc( n[0], double);
-       double *u   = Calloc(d[0], double);
-       double *cumsumcentered = Calloc( n[0]*n[0], double);
+       double *cum0 = calloc( n[0], sizeof(double));
+       double *M0  = calloc( n[0], sizeof(double));
+       double *u   = calloc(d[0], sizeof(double));
+       double *cumsumcentered = calloc( n[0]*n[0], sizeof(double));
       // printf("n = %d d = %d\n", n[0],d[0]);
 
 
@@ -214,7 +214,7 @@
 
         StatST(cumsumcentered,n,S,T);
 
-       Free(M0); Free(cum0); Free(cumsumcentered); Free(u);
+       free(M0); free(cum0); free(cumsumcentered); free(u);
 }
 
 
@@ -224,8 +224,8 @@ void cpCopulaStatsMult(double *M, double *xi, double *s, int *n, double *S, doub
 
        double s1;
 
-      double *B = Calloc( n[0]*n[0], double);
-      double *beta = Calloc( n[0],  double);
+      double *B = calloc( n[0]*n[0], sizeof(double));
+      double *beta = calloc( n[0],  sizeof(double));
 
 
       for(j=0;j<n[0];j++)
@@ -246,7 +246,7 @@ void cpCopulaStatsMult(double *M, double *xi, double *s, int *n, double *S, doub
        StatST(B,n,S,T);
 
 
-       Free(beta); Free(B);
+       free(beta); free(B);
 }
 
 
@@ -262,7 +262,7 @@ void cpCopulaStatsMult(double *M, double *xi, double *s, int *n, double *S, doub
       int i1, i2, j, k, t;
 
 
-   D = Calloc(n[0], double);
+   D = calloc(n[0], sizeof(double));
    S[0] = 0.0;
    T[0] = 0.0;
 
@@ -272,14 +272,14 @@ void cpCopulaStatsMult(double *M, double *xi, double *s, int *n, double *S, doub
 
     i2 = n[0]-i1;
 
-    U1  = Calloc(d[0]*i1 , double);
-    z1  = Calloc(i1      , double);
-    r1  = Calloc(i1      , double);
-    MM1 = Calloc(i1      , double);
-    U2  = Calloc(d[0]*i2 , double);
-    z2  = Calloc(i2      , double);
-    r2  = Calloc(i2      , double);
-    MM2 = Calloc(i2      , double);
+    U1  = calloc(d[0]*i1 , sizeof(double));
+    z1  = calloc(i1      , sizeof(double));
+    r1  = calloc(i1      , sizeof(double));
+    MM1 = calloc(i1      , sizeof(double));
+    U2  = calloc(d[0]*i2 , sizeof(double));
+    z2  = calloc(i2      , sizeof(double));
+    r2  = calloc(i2      , sizeof(double));
+    MM2 = calloc(i2      , sizeof(double));
 
 
       for(k=0;k<d[0];k++)
@@ -342,11 +342,11 @@ void cpCopulaStatsMult(double *M, double *xi, double *s, int *n, double *S, doub
       S[i1] = s/((double)n[0]);
 
 
-   Free(U1); Free(U2); Free(MM1); Free(MM2); Free(z1); Free(z2); Free(r1); Free(r2);
+   free(U1); free(U2); free(MM1); free(MM2); free(z1); free(z2); free(r1); free(r2);
 
    }
 
-  Free(D);
+  free(D);
 
     }
 
@@ -362,9 +362,9 @@ void gradientCop(double *x, int *n, int *d, double *u, double *grad, double *MC,
 
        h = 1.0/sqrt((double)n[0]);
 
-       v1 = Calloc( d[0], double);
-       v2 = Calloc( d[0], double);
-       s  = Calloc( d[0], int);
+       v1 = calloc( d[0], sizeof(double));
+       v2 = calloc( d[0], sizeof(double));
+       s  = calloc( d[0], sizeof(int));
 
        for(j=0;j<d[0];j++)
          s[j] = 0;
@@ -432,7 +432,7 @@ void gradientCop(double *x, int *n, int *d, double *u, double *grad, double *MC,
         }
 
 
-        Free(v1); Free(v2); Free(s);
+        free(v1); free(v2); free(s);
    }
 
 
@@ -444,10 +444,10 @@ void gradientCop(double *x, int *n, int *d, double *u, double *grad, double *MC,
        double *MC0, *MC10 , *u, *grad0;
       // printf("n = %d d = %d\n", n[0],d[0]);
 
-      MC0    = Calloc( n[0]       ,double);
-      MC10   = Calloc( n[0]* d[0] ,double);
-      grad0  = Calloc( d[0]       ,double);
-       u     = Calloc(d[0]        ,double);
+      MC0    = calloc( n[0]       ,sizeof(double));
+      MC10   = calloc( n[0]* d[0] ,sizeof(double));
+      grad0  = calloc( d[0]       ,sizeof(double));
+       u     = calloc(d[0]        ,sizeof(double));
 
        for(j=0;j<n[0];j++)
        {
@@ -471,7 +471,7 @@ void gradientCop(double *x, int *n, int *d, double *u, double *grad, double *MC,
 
 
 
-       Free(MC0); Free(MC10); Free(u); Free(grad0);
+       free(MC0); free(MC10); free(u); free(grad0);
 }
 
 
@@ -483,10 +483,10 @@ void cpCopulaStatsMultBucherNonSeq(double *MC, double *MC1, double *grad, double
        double *beta, *beta1, *B, *ss;
 
 
-      B     = Calloc( n[0]*n[0] ,double);
-      beta  = Calloc( n[0]      ,double);
-      beta1 = Calloc( n[0]*d[0] ,double);
-      ss    = Calloc( d[0]      ,double);
+      B     = calloc( n[0]*n[0] ,sizeof(double));
+      beta  = calloc( n[0]      ,sizeof(double));
+      beta1 = calloc( n[0]*d[0] ,sizeof(double));
+      ss    = calloc( d[0]      ,sizeof(double));
 
 
       for(j=0;j<n[0];j++)
@@ -528,7 +528,7 @@ void cpCopulaStatsMultBucherNonSeq(double *MC, double *MC1, double *grad, double
        StatST(B,n,S,T);
 
 
-     Free(beta); Free(beta1); Free(B); Free(ss);
+     free(beta); free(beta1); free(B); free(ss);
 
            //      printf("toto\n");
 }
@@ -544,7 +544,7 @@ void cpCopulaStatsMultBucherSeq(double *U, double *grad, double *xi, int *n, int
       int i1, i2, j, k, t;
 
 
-   Dcheck = Calloc(n[0], double);
+   Dcheck = calloc(n[0], sizeof(double));
    h = 1.0/sqrt((double)n[0]);
 
    for(i1=1;i1<n[0];i1++)
@@ -553,16 +553,16 @@ void cpCopulaStatsMultBucherSeq(double *U, double *grad, double *xi, int *n, int
 
      i2 = n[0]-i1;
 
-    U1  = Calloc(d[0]*i1 ,double);
-    z1  = Calloc(i1      ,double);
-    r1  = Calloc(i1      ,double);
-    MM1 = Calloc(i1      ,double);
-    MM1m= Calloc(i1      ,double);
-    U2  = Calloc(d[0]*i2 ,double);
-    z2  = Calloc(i2      ,double);
-    r2  = Calloc(i2      ,double);
-    MM2 = Calloc(i2      ,double);
-    MM2m= Calloc(i2      ,double);
+    U1  = calloc(d[0]*i1 ,sizeof(double));
+    z1  = calloc(i1      ,sizeof(double));
+    r1  = calloc(i1      ,sizeof(double));
+    MM1 = calloc(i1      ,sizeof(double));
+    MM1m= calloc(i1      ,sizeof(double));
+    U2  = calloc(d[0]*i2 ,sizeof(double));
+    z2  = calloc(i2      ,sizeof(double));
+    r2  = calloc(i2      ,sizeof(double));
+    MM2 = calloc(i2      ,sizeof(double));
+    MM2m= calloc(i2      ,sizeof(double));
 
 
       for(k=0;k<d[0];k++)
@@ -668,11 +668,11 @@ void cpCopulaStatsMultBucherSeq(double *U, double *grad, double *xi, int *n, int
 
       S[i1] = s1/((double)n[0]);
 
-   Free(U1); Free(U2);
-   Free(MM1); Free(MM2); Free(MM1m); Free(MM2m);
-   Free(z1); Free(z2);Free(r1); Free(r2);
+   free(U1); free(U2);
+   free(MM1); free(MM2); free(MM1m); free(MM2m);
+   free(z1); free(z2);free(r1); free(r2);
 
 
    }
-  Free(Dcheck);
+  free(Dcheck);
    }

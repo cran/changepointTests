@@ -1,6 +1,5 @@
 #'@title Function to compute the statistics for the BKRS process
 #'
-#'
 #'@description This function is used to compute bootstrapped statistics from the BKRS process in the sequential case
 #'@param U      matrix needed for multipliers
 #'@param grad   gradient of the copula

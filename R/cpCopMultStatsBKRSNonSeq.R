@@ -1,6 +1,5 @@
 #'@title Function to compute the bootstrapped statistics for the BKRS process
 #'
-#'
 #'@description This function is used to compute bootstrapped statistics from the BKRS process in the non-sequential case
 #'@param MC      matrix needed for multipliers
 #'@param MC1     matrices needed for multipliers
